@@ -1,1 +1,33 @@
+import java.util.Scanner;
+public class mukemmelSayi {
 
+    /* **TR** Mükemmel Sayı Nedir ?
+Bir sayının kendisi hariç pozitif tam sayı çarpanları
+(kalansız bölen sayıların) toplamı kendisine
+ eşit olan sayıya mükemmel sayı denir.
+      **ENG** What is a Perfect Number?
+Integer factors of a number itself except positive
+the sum of (contributions dividing without a remainder)
+ A number that is even is called a perfect number.  */
+
+    public static void main (String [] args) {
+        int number, total = 0;
+        Scanner scan = new Scanner(System.in);
+        number = scan.nextInt();
+
+        for (int i = 1; i< number; i++) {
+            if (number % i == 0) {
+                total = total + i;
+
+            }
+
+        }
+        if (total == number) {
+
+            System.out.print("Perfect Number" + number);
+        }
+        else {
+            System.out.print("Not perfect number" + number);
+        }
+    }
+}
